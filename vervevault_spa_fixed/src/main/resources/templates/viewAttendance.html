@@ -1,0 +1,13 @@
+
+<th:block th:replace="fragments/header :: header"></th:block>
+<h3>Attendance</h3>
+<table class="table">
+  <thead><tr><th>Student</th><th>Date</th><th>Present</th></tr></thead>
+  <tbody>
+    <tr th:each="r : ${records}">
+      <td th:text="${r.studentName}">Student</td>
+      <td th:text="${r.date}">Date</td>
+      <td th:text="${r.present}? 'Yes' : 'No'">No</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,17 @@
+
+<th:block th:replace="fragments/header :: header"></th:block>
+<form th:action="@{/attendance/add}" th:object="${attendance}" method="post">
+  <div class="mb-3">
+    <label class="form-label">Student Name</label>
+    <input type="text" th:field="*{studentName}" class="form-control" required/>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Date</label>
+    <input type="date" name="date" class="form-control" required/>
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" th:field="*{present}" class="form-check-input"/>
+    <label class="form-check-label">Present</label>
+  </div>
+  <button class="btn btn-primary">Save Attendance</button>
+</form>

@@ -1,0 +1,13 @@
+
+<th:block th:replace="fragments/header :: header"></th:block>
+<h3>Events</h3>
+<table class="table">
+  <thead><tr><th>Name</th><th>Date</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr th:each="e : ${events}">
+      <td th:text="${e.name}">Name</td>
+      <td th:text="${e.date}">Date</td>
+      <td th:text="${e.description}">Desc</td>
+    </tr>
+  </tbody>
+</table>

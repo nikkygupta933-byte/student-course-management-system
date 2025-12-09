@@ -1,0 +1,49 @@
+<!Doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-uat-Compatible" content="IE=edge">
+		<title>Students</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+	
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+	</head>
+	<body>
+		<div class="container p-2">
+			<div class="card">
+				<div class="card-body ">
+					
+						<div class="col-md-10">
+							<form action="#" th:action="@{/students/add}" th:object="${student}" method="post">
+								<div class="mb-2">
+									<label class="form-label">Student Name</label>
+									<input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Name">
+									</div>
+									<div class="mb-2">
+									<label class="form-Label">Student Group</label>
+										<input type="text" th:field="*{studentGroup}" class="form-control" id="studentGroup" placeholder="Group">
+								</div>
+								<div class="mb-2">
+											<label class="form-Label">Student Course</label>
+									<input type="text" th:field="*{course}" class="form-control" id="course" placeholder="Course">
+												</div>
+								<div class="mb-2">
+									<label class="form-Label">Student Age</label>
+									<input type="text" th:field="*{age}" class="form-control" id="age" placeholder="Age">
+								</div>
+								<div class="mb-2">
+								<input type="submit" class="btn btn-primary" value="Add Student">
+																	</div>
+							</form>
+	
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		
+	</body>
+	</html>

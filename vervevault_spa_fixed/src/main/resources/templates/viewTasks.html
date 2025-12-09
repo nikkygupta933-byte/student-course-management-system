@@ -1,0 +1,17 @@
+
+<th:block th:replace="fragments/header :: header"></th:block>
+<h3>Tasks</h3>
+<table class="table">
+  <thead><tr><th>Name</th><th>Completed</th><th>Action</th></tr></thead>
+  <tbody>
+    <tr th:each="t : ${tasks}">
+      <td th:text="${t.name}">Name</td>
+      <td><span th:text="${t.completed}? 'Yes' : 'No'">No</span></td>
+      <td>
+        <form th:action="@{/tasks/toggle/{id}(id=${t.id})}" method="post" style="display:inline">
+          <button class="btn btn-sm btn-outline-primary">Toggle</button>
+        </form>
+      </td>
+    </tr>
+  </tbody>
+</table>

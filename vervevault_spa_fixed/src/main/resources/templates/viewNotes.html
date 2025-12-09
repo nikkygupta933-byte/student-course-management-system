@@ -1,0 +1,12 @@
+
+<th:block th:replace="fragments/header :: header"></th:block>
+<h3>Notes</h3>
+<table class="table table-striped">
+  <thead><tr><th>Title</th><th>Content</th></tr></thead>
+  <tbody>
+    <tr th:each="n : ${notes}">
+      <td th:text="${n.title}">Title</td>
+      <td th:text="${n.content}">Content</td>
+    </tr>
+  </tbody>
+</table>
