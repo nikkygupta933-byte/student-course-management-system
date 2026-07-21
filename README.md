@@ -98,11 +98,6 @@ git clone https://github.com/nikkygupta933-byte/student-course-management-system
 
 ---
 
-## 📸 Screenshots
-
-> Screenshots will be added soon.
-
----
 
 ## 🔮 Future Enhancements
 
@@ -134,4 +129,4 @@ https://github.com/nikkygupta933-byte
 
 ---
 
-⭐ If you found this project useful, consider giving it a star!
+
